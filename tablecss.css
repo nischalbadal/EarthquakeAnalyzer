@@ -1,0 +1,90 @@
+body {
+  margin:0;
+  padding:0;
+  font-family: 'Titillium Web', sans-serif;
+  overflow-x: hidden;
+ }
+ html {
+  scroll-behavior: smooth;
+}
+
+.nav{
+    height: 90px;
+    background-color: black;
+    text: white;
+    font-size: 25px;
+    margin:-10px -18px;
+    padding: 15px;
+}
+#logo{
+
+    font-size: 44px;
+    position: relative;
+    left: 300px;
+    font-weight:bold;
+    top: 15px;
+}
+
+.text-right {
+    display: inline-block;
+    float: right;
+    position: relative;
+    right: 200px;
+	   top: 20px;
+    font-size: 25px;
+}
+h1{
+    font-size: 45px;
+}
+a:-webkit-any-link {
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 10px 10px;
+}
+a.hover{
+  text-decoration: underline;
+
+}
+.mytable{
+padding:10px 10px;
+align-self: : center;
+font-size:20px;
+}
+td {
+    PADDING: 10PX 20PX;
+  }
+  .btn {
+    background-color: DodgerBlue;
+    border: none;
+    color: white;
+    padding: 12px 30px;
+    cursor: pointer;
+    font-size: 20px;
+  }
+
+  /* Darker background on mouse-over */
+  .btn:hover {
+    background-color: RoyalBlue;
+  }
+  #search{
+    font-size: 20px;
+    padding: 20px 10px;
+    position: absolute;
+    margin-left: 1500px;
+  }
+  #text-center{
+    font-size: 40px;
+    padding: 20px 10px;
+    align: center;
+  }
+  #myInput {
+    background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+    background-position: 10px 12px; /* Position the search icon */
+    background-repeat: no-repeat; /* Do not repeat the icon image */
+    width: 40%; /* Full-width */
+    font-size: 16px; /* Increase font-size */
+    padding: 12px 20px 12px 40px; /* Add some padding */
+    border: 1px solid #ddd; /* Add a grey border */
+    margin-bottom: 12px; /* Add some space below the input */
+  }

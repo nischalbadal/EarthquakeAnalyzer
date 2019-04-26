@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Data- Earthquake Analyzer</title>
+</head>
+<body>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/4.1.2/papaparse.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="tablecss.css" rel="stylesheet" type="text/css">
+<nav class="nav" >
+
+  <a href="index.html" id="logo">
+    Earthquake Analyzer
+  </a>
+  <div class="text-right">
+
+    <a href="index.html" style = "font-weight: bold;" >
+      HOME
+    </a>
+
+
+    <a href="index.html#map">
+      <b>EXPLORE </b>
+    </a>
+
+    <a href="test.html">
+      <b>CHARTS </b>
+    </a>
+
+    <a href="#" selected>
+      <b>DATA </b>
+
+    <a href="references.html" >
+      <b> REFERENCES </b> </a>
+
+  </div>
+
+</nav>
+<div id="search">
+	<center> <b> DOWNLOADS </b> </center><br>
+Download Earthquake 2015 Data CSV
+<a href="earthquakedata.csv" target="_blank"><button class="btn"><i class="fa fa-download"></i> Download</button></a>
+<br><br>
+Download Earthquake 2015 Data JSON
+<a href="earthquakedata2015.json" target="_blank"><button class="btn"><i class="fa fa-download"></i> Download</button></a>
+
+</div>
+<div id="text-center">
+Earthquake 2015- Geographical Data with co-ordinates
+
+</div>
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for earthquakes by any of the headers below..">
+<script>
+    function arrayToTable(tableData) {
+        var table = $('<table class="mytable"></table>');
+        $(tableData).each(function (i, rowData) {
+            var row = $('<tr></tr>');
+            $(rowData).each(function (j, cellData) {
+                row.append($('<td>'+cellData+'</td>'));
+            });
+            table.append(row);
+        });
+        return table;
+    }
+
+    $.ajax({
+        type: "GET",
+        url: "earthquakedata.csv",
+        success: function (data) {
+            $('body').append(arrayToTable(Papa.parse(data).data));
+        }
+    });
+
+    $(document).ready(function(){
+      $("#myInput").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        $(".mytable tr").filter(function() {
+          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+      });
+    });
+
+</script>
+
+</body>

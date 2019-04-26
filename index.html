@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8' />
+<title>Home | Earthquake Analyzer</title>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<link href="style.css" rel="stylesheet" type="text/css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.js"></script>
+<script src="sketch.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.js'></script>
+<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.css' rel='stylesheet' />
+</head>
+<nav class="nav" >
+
+  <a href="index.html" id="logo">
+    Earthquake Analyzer
+  </a>
+  <div class="text-right">
+
+    <a href="index.html" style = "font-weight: bold;" >
+      HOME
+    </a>
+
+
+    <a href="#map">
+      <b>EXPLORE </b>
+    </a>
+
+    <a href="test.html">
+      <b>CHARTS </b>
+    </a>
+
+    <a href="table.html">
+      <b>DATA </b>
+
+    <a href="references.html">
+      <b> REFERENCES </b> </a>
+
+  </div>
+
+</nav>
+<body>
+<div id="text-front">
+  <center> <b id="text-center"> SITUATION OVERVIEW</b> </center>
+  <br>
+
+  The earthquake that occurred on <b> 25 April, 2015 (7.8 magnitude) </b> was followed by a series of aftershocks mostly to the east of the original epicentre causing further localised damage. The most intense aftershock to date occurred on the 12 May with a magnitude of 7.3 and an epicentre in Dolakha district east of Kathmandu; after shocks continue. This event is commonly referred to as the 12 May earthquake.
+
+  As of <b> 15 May, 8,316 people had been killed and more than 17,866 injured.</b> Reports indicate that <b> 15,001 governmental buildings and 288,797 public (residential) buildings have been completely destroyed </b>following the initial quake. <b> 39 of Nepal’s 75 districts </b> have been affected.
+
+  The government has designated <b> 14 most affected districts, namely Gorkha, Kavrepalanchok,
+  Dhading, Nuwakot, Rasuwa, Sindupalchok, Dolakha, Ramechhap, Okhaldunga, Makwanpur,
+  Sindhuli, Kathmandu, Bhaktapur and Lalitpur.</b>
+<br>
+  On 10 May, an additional nine affected districts were added by the government; Tanahu, Kaski,
+  Nawalparasi, Chitwan, Syangja, Parsa, Lamjung, Palpa and Parbat. Limited information on damages from these districts is available.
+
+  Available information on the impact of the first earthquake (25 April) indicates that<b> Sindhupalchok,
+  Gorkha and Dhading</b> are the priority districts for assistance. Although Rasuwa has a relatively small population, it is difficult to access and current information indicates over 80% of the population are affected. UNDAC has established humanitarian hubs in Gorkha and Sindhupalchok.
+
+  Preliminary information from the <b> 12 May earthquake</b>, including the location of the epicentre suggests that Dolakha and potentially Sindhuli should now be considered priority districts for assistance. Limited information from these areas is presently available.
+
+  Relief efforts are beginning to reach remote and difficult to access mountainous regions through efforts via the use of helicopters. However, challenges still remain in accessing many areas or communicating with them and therefore information is lacking. There are reports that many communities close to distribution hubs and ones which relief supplies pass through are not receiving relief due to a focus on reaching more outlying areas (Local sources 12/05/2015).
+<br>
+  Landslides triggered by the earthquake and aftershocks have hindered access in many districts. The landslide situation is fluid and aggravated by pre-monsoon rains. Concerns were initially reported about the Tho-Rolpa lake in Rolwaling Valley that could overflow into the valley because of a landslide (Local Sources 13/05/2015). These concerns have since been adressed by the government stating that the lake has not received any damage (NEOC 13/05/2015) .There are also new concerns about the stability of the Sun Koshi dam in Sindhapulchok district that formed as a consequence of a landslide last August, and lies close to the 25 th April epicenter.
+
+  The monsoon (usually expected from the start of June) will see the situation in regard to landslides and access in general deterioriate, emphasizing the need for the rapid mobiization and distribution of relief and the need to provide appropriate shelter solutions.
+</div>
+
+<center> <h1 id="map-header"> Earthquake 2015 - Magnitude Variation </h1> <button  onclick="preload1()" class="button"> NEXT >> </button> </center>
+<div id='map'></div>
+
+
+
+</body>
+	<footer style=" background-color: black;
+      color: snow;
+      text-align: center;
+      padding: 18px;
+      margin: -10px;
+      position: relative;
+      top: 850px;
+      font-size: 20px;
+  }" > <center> Copyright &copy; Earthquake Analyzer 2019 </center></footer>
+</html>
